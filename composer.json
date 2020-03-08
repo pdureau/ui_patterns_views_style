@@ -1,0 +1,10 @@
+{
+  "name": "drupal/ui_patterns_views_style",
+  "description": "UI Patterns Views Style",
+  "keywords": ["drupal", "web", "ui"],
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/ui_patterns": "^1.1"
+  }
+}

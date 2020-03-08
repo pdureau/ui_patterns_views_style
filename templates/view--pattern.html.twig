@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * To display a view group inside a pattern.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapping element.
+ * - title: The title of this group of rows. May be empty.
+ * - options: The view plugin style options.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ */
+#}
+
+{% set pattern_settings = options.fields %}
+{% set pattern_settings = options.variant ? pattern_settings | merge({ 'variant': options.variant }) : pattern_settings  %}
+{% set pattern_settings = attributes ? pattern_settings | merge({ 'attributes': attributes }) : pattern_settings  %}
+{% set pattern_settings = options.settings ? pattern_settings | merge(options.settings) : pattern_settings  %}
+
+{{ pattern(options.pattern, pattern_settings) }}
